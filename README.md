@@ -8,3 +8,6 @@ Project 2: Data visualization
 # Working with web api's, p.359
 Git and GitHub, p.360
 Requesting data using an API call, p.360
+ToDo: Installing requests, p.361
+Processing an API response, p.361
+    python_repos.py
