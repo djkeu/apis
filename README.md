@@ -27,3 +27,6 @@ Note: More about plotly and the GitHub API, p.371
     https://developer.github.com/v3/
 
 # The hacker news API, p.372
+    https://hacker-news.firebaseio.com/v0/item/19155826.json
+    hn_article.py
+
