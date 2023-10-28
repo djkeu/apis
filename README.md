@@ -15,3 +15,6 @@ Working with the response dictionary, p.362
 Summarizing the top repositories, p.364
 Monitoring API rate limits, p.365
     https://api.github.com/rate_limit
+
+# Visualizing repositories using plotly, p.366
+    
