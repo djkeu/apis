@@ -1,4 +1,5 @@
 __pycache__
 bin/
 
-python_repos.html
+*.html
+*,json
