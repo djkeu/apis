@@ -20,3 +20,4 @@ Monitoring API rate limits, p.365
     python_visual_repos.py
 Refining plotly charts, p.368
 Adding custom tooltips, p.369
+Adding clickable links to our graph, p.370
