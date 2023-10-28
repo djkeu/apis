@@ -3,3 +3,5 @@ bin/
 
 *.html
 *.json
+
+# Use 'git rm --cached' to remove files already tracked
