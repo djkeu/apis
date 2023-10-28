@@ -25,5 +25,11 @@ data = [{
     'y': stars,
 }]
 
+my_layout = {
+    'title': 'Most-starred Python projects on GitHub',
+    'xaxis': {'title': 'Repository'},
+    'yaxis': {'title': 'Stars'},
+}
 
-    
+fig = {'data': data, 'layout': my_layout}
+offline.plot(fig, filename='python_repos.html')
