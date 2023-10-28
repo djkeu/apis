@@ -3,9 +3,9 @@
 Python crash course
 Project 2: Data visualization
 
-# Chapter 17: Working with api's, p.359
+# Chapter 17: Working with API's, p.359
 
-# Working with web api's, p.359
+# Working with web API's, p.359
 Git and GitHub, p.360
 Requesting data using an API call, p.360
 ToDo: Installing requests, p.361
