@@ -21,3 +21,9 @@ Monitoring API rate limits, p.365
 Refining plotly charts, p.368
 Adding custom tooltips, p.369
 Adding clickable links to our graph, p.370
+Note: More about plotly and the GitHub API, p.371
+    https://plot.ly/python/user-guide/
+    https://plot.ly/python/reference/
+    https://developer.github.com/v3/
+
+# The hacker news API, p.372
