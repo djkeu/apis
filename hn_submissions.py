@@ -18,9 +18,6 @@ for submission_id in submission_ids[:5]:
     print(f"id: {submission_id}\tstatus: {r.status_code}")
     response_dict = r.json()
 
-    for key in response_dict.keys():
-        print(key)
-
     # Build a dictionary for each article
     submission_dict = {
         'title': response_dict['title'],
