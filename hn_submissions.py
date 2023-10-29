@@ -11,6 +11,7 @@ print(f"Status code: {r.status_code}")
 submission_ids = r.json()
 submission_dicts = []
 
+# Note: KeyError 'descendants' if submission_ids[] >= [:10] 
 for submission_id in submission_ids[:5]:
     # Make a seperate API call for eacht submission
     url = f"https://hacker-news.firebaseio.com/v0/item/{submission_id}.json"
@@ -22,7 +23,6 @@ for submission_id in submission_ids[:5]:
     submission_dict = {
         'title': response_dict['title'],
         'hn_link': f"http://news.ycombinator.com/item?id={submission_id}",
-        # Note: KeyError 'descendants'. 
         'comments': response_dict['descendants'],
     }
     submission_dicts.append(submission_dict)
