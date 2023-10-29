@@ -34,7 +34,7 @@ Note: More about plotly and the GitHub API, p.371
 
 # Try it yourself, p.375
 
-## ToDo: 17-1. Other Languages: 
+## 17-1. Other Languages: 
 Modify the API call in python_repos.py so it generates a chart showing the most popular projects in other languages. Try languages such as JavaScript, Ruby, C, Java, Perl, Haskell, and Go.
     python_repos.py
 
