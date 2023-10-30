@@ -38,11 +38,11 @@ Note: More about plotly and the GitHub API, p.371
 Modify the API call in python_repos.py so it generates a chart showing the most popular projects in other languages. Try languages such as JavaScript, Ruby, C, Java, Perl, Haskell, and Go.
     python_repos.py
 
-## ToDo: 17-2. Active Discussions: 
+## 17-2. Active Discussions: 
 Using the data from hn_submissions.py, make a bar chart showing the most active discussions currently happening on Hacker News. The height of each bar should correspond to the number of comments
 each submission has. The label for each bar should include the submission’s title and should act as a link to the discussion page for that submission.
-# Todo: clickable labels
     hn_submissions.py
+    hn_chatgpt.py
 
 ## ToDo: 17-3. Testing python_repos.py: 
 In python_repos.py, we printed the value of status_code to make sure the API call was successful. Write a program called test_python_repos.py that uses unittest to assert that the value of status_code
