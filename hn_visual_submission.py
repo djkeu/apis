@@ -12,7 +12,7 @@ print(f"Status code: {r.status_code}")
 
 # Process information about each submission
 submission_ids = r.json()
-submission_dicts, submission_names, submission_comments = [], [], []
+submission_dicts, submission_links, submission_comments = [], [], []
 
 for submission_id in submission_ids[:19]:
     # Make a seperate API call for each submission
@@ -27,28 +27,31 @@ for submission_id in submission_ids[:19]:
         'comments': response_dict['descendants'],
     }
     submission_dicts.append(submission_dict)
+    submission_dicts = sorted(submission_dicts, key=itemgetter('comments'), reverse=True)
 
     submission_name = submission_dict['title']
-    submission_names.append(submission_name)
+    submission_url = submission_dict['hn_link']
 
-    # ToDo: clickable submission_links
+    submission_link = f"<a href='{submission_url}'>{submission_name}</a>"
+    submission_links.append(submission_link)
+
+    # ToDo: sort submission_links
 
     submission_comment = submission_dict['comments']
     submission_comments.append(submission_comment)
-
-submission_dicts = sorted(submission_dicts, key=itemgetter('comments'), reverse=True)
-
+    
+    
 # Try it yourself 17.2 Active discussions
 data = [{
     'type': 'bar',
-    'x': submission_names,
+    'x': submission_links,
     'y': submission_comments,
     'marker': {'color': 'rgb(200, 0, 0)'}, 
 }]
 
 my_layout = {
-    'title': "HackerNews submissions",
-    'xaxis': {'title': 'Repository'},
+    'title': "HackerNews Submissions",
+    'xaxis': {'title': 'Submissions'},
     'yaxis': {'title': 'Comments'}
 }
 
