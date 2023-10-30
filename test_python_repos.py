@@ -1,10 +1,14 @@
 import unittest
-from python_repos import api_call
+import requests
 
-class TestRepoMethods(unittest.TestCase):
+class TestGitHubAPI(unittest.TestCase):
+    def test_api_status_code(self):
+        url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
+        headers = {'Accept': 'application/vnd.github.v3+json'}
+        r = requests.get(url, headers=headers)
 
-    def test_api_call(self):
-        self.assertEqual(api_call(), 200)
-    
+        # Check if the status code is 200 (OK)
+        self.assertEqual(r.status_code, 200)
+
 if __name__ == '__main__':
     unittest.main()
