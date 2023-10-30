@@ -14,7 +14,7 @@ print(f"Status code: {r.status_code}")
 submission_ids = r.json()
 submission_dicts, submission_names, submission_comments = [], [], []
 
-for submission_id in submission_ids[:9]:
+for submission_id in submission_ids[:19]:
     # Make a seperate API call for each submission
     url = f"https://hacker-news.firebaseio.com/v0/item/{submission_id}.json"
     r = requests.get(url)
@@ -31,6 +31,8 @@ for submission_id in submission_ids[:9]:
     submission_name = submission_dict['title']
     submission_names.append(submission_name)
 
+    # ToDo: clickable submission_links
+
     submission_comment = submission_dict['comments']
     submission_comments.append(submission_comment)
 
@@ -41,7 +43,7 @@ data = [{
     'type': 'bar',
     'x': submission_names,
     'y': submission_comments,
-    'marker': {'color': 'rgb(200, 100, 100)'}, 
+    'marker': {'color': 'rgb(200, 0, 0)'}, 
 }]
 
 my_layout = {
