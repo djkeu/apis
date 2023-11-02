@@ -2,6 +2,8 @@
 
 __pycache__/
 bin/
+api_env/
 
 *.html
 *.json
+api_env/lib64
