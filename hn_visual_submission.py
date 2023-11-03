@@ -27,7 +27,6 @@ for submission_id in submission_ids[:19]:
         'comments': response_dict['descendants'],
     }
     submission_dicts.append(submission_dict)
-    submission_dicts = sorted(submission_dicts, key=itemgetter('comments'), reverse=True)
 
     submission_name = submission_dict['title']
     submission_url = submission_dict['hn_link']
@@ -35,10 +34,9 @@ for submission_id in submission_ids[:19]:
     submission_link = f"<a href='{submission_url}'>{submission_name}</a>"
     submission_links.append(submission_link)
 
-    # ToDo: sort submission_links
-
     submission_comment = submission_dict['comments']
     submission_comments.append(submission_comment)
+    submission_comments = sorted(submission_comments, reverse=True)
     
     
 # Try it yourself 17.2 Active discussions
